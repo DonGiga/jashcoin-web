@@ -1,1 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>JASHCOIN (JASH) | BNB Smart Chain</title>
+
+  <meta name="description" content="Web oficial de JASHCOIN (JASH), token de suministro fijo en BNB Smart Chain.">
+  <meta name="theme-color" content="#080b12">
+
+  <link rel="canonical" href="https://jashcoin.es/">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 50% 0%, #202518 0%, #0d1015 35%, #05070a 75%);
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* NAV */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5, 7, 10, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .mini-coin {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #17130a;
+      font-weight: 1000;
+      font-size: 21px;
+      background: linear-gradient(145deg, #fff1a8, #d4af37 45%, #806615);
+      border: 2px solid #f4d76d;
+      box-shadow: 0 0 20px rgba(212,175,55,.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      color: #c9c9c9;
+    }
+
+    .nav-links a:hover {
+      color: #f0cf61;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 760px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .coin {
+      width: 155px;
+      height: 155px;
+      margin: 0 auto 30px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 76px;
+      font-weight: 1000;
+      color: #17130a;
+      background:
+        radial-gradient(circle at 35% 30%, #fff8c5, #e6c44d 35%, #9b7719 75%);
+      border: 6px double #f5d967;
+      box-shadow:
+        0 0 45px rgba(212,175,55,.28),
+        inset 0 0 25px rgba(255,255,255,.35);
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid rgba(212,175,55,.35);
+      background: rgba(212,175,55,.08);
+      color: #f0cf61;
+      padding: 7px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 9vw, 88px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 12px;
+    }
+
+    h1 span {
+      color: #e3bf4b;
+    }
+
+    .subtitle {
+      color: #aaa;
+      max-width: 720px;
+      margin: 20px auto 32px;
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-weight: 800;
+      transition: .2s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f0d264, #bd9020);
+      color: #111;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212,175,55,.2);
+    }
+
+    .btn-secondary {
+      border: 1px solid #34383f;
+      background: #11151b;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      border-color: #d4af37;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 5vw, 45px);
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #929292;
+    }
+
+    /* STATS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #10141a, #090c10);
+      border: 1px solid #20252c;
+      border-radius: 16px;
+      padding: 28px 20px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: #e4c34f;
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      color: #999;
+      font-size: 14px;
+    }
+
+    /* CONTRACT */
+
+    .contract-box {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      background: #0c1015;
+      border: 1px solid rgba(212,175,55,.25);
+      padding: 35px;
+      border-radius: 18px;
+    }
+
+    .contract-address {
+      margin: 22px 0;
+      padding: 16px;
+      background: #05070a;
+      border: 1px solid #252a31;
+      border-radius: 10px;
+      color: #e7cb66;
+      overflow-wrap: anywhere;
+      font-family: monospace;
+      font-size: 15px;
+    }
+
+    /* HOW */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #d4af37;
+      color: #111;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    /* TRANSPARENCY */
+
+    .transparency {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      gap: 15px;
+    }
+
+    .check {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .checkmark {
+      color: #e4c34f;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* DISCLAIMER */
+
+    .warning {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255,255,255,.025);
+      border: 1px solid #252a31;
+      border-radius: 15px;
+      padding: 28px;
+      color: #999;
+      font-size: 13px;
+    }
+
+    footer {
+      border-top: 1px solid #1b1f25;
+      padding: 40px 0;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+
+    @media (max-width: 850px) {
+      .stats,
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .stats,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 680px;
+      }
+
+      .coin {
+        width: 125px;
+        height: 125px;
+        font-size: 60px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="brand">
+      <div class="mini-coin">J</div>
+      JASHCOIN
+    </a>
+
+    <div class="nav-links">
+      <a href="#datos">Datos</a>
+      <a href="#comprar">Cómo comprar</a>
+      <a href="#transparencia">Transparencia</a>
+      <a href="#contrato">Contrato</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="hero">
+  <div class="container hero-content">
+
+    <div class="coin">J</div>
+
+    <div class="tag">BNB SMART CHAIN</div>
+
+    <h1>JASH<span>COIN</span></h1>
+
+    <p class="subtitle">
+      JASH (JASH) es un token de suministro fijo desplegado sobre
+      BNB Smart Chain. Transparencia, simplicidad y un máximo
+      definitivo de 21 millones de tokens.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-primary"
+         href="https://pancakeswap.finance/swap?outputCurrency=0xcE19ea3c9256f872806eeb15a873Ab3523Bd02C6"
+         target="_blank"
+         rel="noopener noreferrer">
+        Comprar JASH
+      </a>
+
+      <a class="btn btn-secondary"
+         href="https://bscscan.com/address/0xcE19ea3c9256f872806eeb15a873Ab3523Bd02C6"
+         target="_blank"
+         rel="noopener noreferrer">
+        Ver en BscScan
+      </a>
+    </div>
+
+  </div>
+</header>
+
+
+<section id="datos">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Datos de JASHCOIN</h2>
+      <p>Información principal del token.</p>
+    </div>
+
+    <div class="stats">
+
+      <div class="card stat">
+        <strong>21.000.000</strong>
+        <span>Suministro máximo</span>
+      </div>
+
+      <div class="card stat">
+        <strong>JASH</strong>
+        <span>Símbolo</span>
+      </div>
+
+      <div class="card stat">
+        <strong>18</strong>
+        <span>Decimales</span>
+      </div>
+
+      <div class="card stat">
+        <strong>BNB Chain</strong>
+        <span>Red</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="contrato">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Contrato oficial</h2>
+      <p>Comprueba siempre la dirección antes de realizar una operación.</p>
+    </div>
+
+    <div class="contract-box">
+
+      <h3>JASHCOIN — JASH</h3>
+
+      <div class="contract-address" id="contract">
+        0xcE19ea3c9256f872806eeb15a873Ab3523Bd02C6
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-primary" onclick="copyContract()">
+          Copiar contrato
+        </button>
+
+        <a class="btn btn-secondary"
+           href="https://bscscan.com/address/0xcE19ea3c9256f872806eeb15a873Ab3523Bd02C6"
+           target="_blank"
+           rel="noopener noreferrer">
+          Comprobar en BscScan
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="comprar">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Cómo comprar JASH</h2>
+      <p>JASH dispone de un pool de liquidez en PancakeSwap V2.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="card">
+        <div class="step-number">1</div>
+        <h3>Prepara tu wallet</h3>
+        <p>
+          Utiliza una cartera compatible con BNB Smart Chain
+          y asegúrate de estar conectado a la red correcta.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="step-number">2</div>
+        <h3>Ten BNB</h3>
+        <p>
+          Necesitarás BNB tanto para el intercambio como para
+          pagar las comisiones de red.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="step-number">3</div>
+        <h3>Abre PancakeSwap</h3>
+        <p>
+          Busca JASH utilizando exclusivamente la dirección
+          oficial del contrato publicada en esta web.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="step-number">4</div>
+        <h3>Verifica y cambia</h3>
+        <p>
+          Revisa la dirección, la cantidad, el impacto de precio
+          y las condiciones antes de confirmar cualquier operación.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="transparencia">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Transparencia</h2>
+      <p>Características verificables directamente en la blockchain.</p>
+    </div>
+
+    <div class="transparency">
+
+      <div class="card check">
+        <div class="checkmark">✓</div>
+        <div>
+          <h3>Suministro fijo</h3>
+          <p>
+            El suministro máximo de JASHCOIN es de 21.000.000 JASH.
+          </p>
+        </div>
+      </div>
+
+      <div class="card check">
+        <div class="checkmark">✓</div>
+        <div>
+          <h3>Sin función de creación adicional</h3>
+          <p>
+            El contrato desplegado no incorpora una función mint
+            para crear nuevos JASH.
+          </p>
+        </div>
+      </div>
+
+      <div class="card check">
+        <div class="checkmark">✓</div>
+        <div>
+          <h3>Código fuente verificado</h3>
+          <p>
+            El código fuente del contrato puede consultarse y
+            comprobarse públicamente en BscScan.
+          </p>
+        </div>
+      </div>
+
+      <div class="card check">
+        <div class="checkmark">✓</div>
+        <div>
+          <h3>Operaciones públicas</h3>
+          <p>
+            Las transferencias y movimientos del token pueden
+            consultarse públicamente en BNB Smart Chain.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Aviso de riesgo</h2>
+    </div>
+
+    <div class="warning">
+      JASHCOIN es un criptoactivo. Los criptoactivos pueden experimentar
+      variaciones significativas de precio y liquidez. La existencia de
+      un token, un contrato verificado o un pool de liquidez no garantiza
+      rentabilidad ni estabilidad de precio. Comprueba siempre la dirección
+      oficial del contrato y realiza tu propia evaluación antes de efectuar
+      cualquier operación.
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <p><strong>JASHCOIN</strong> · JASH · BNB Smart Chain</p>
+    <p style="margin-top:8px;">
+      Contrato: 0xcE19ea3c9256f872806eeb15a873Ab3523Bd02C6
+    </p>
+  </div>
+</footer>
+
+
+<script>
+  function copyContract() {
+    const contract =
+      "0xcE19ea3c9256f872806eeb15a873Ab3523Bd02C6";
+
+    navigator.clipboard.writeText(contract).then(() => {
+      alert("Contrato JASH copiado");
+    });
+  }
+</script>
+
+</body>
+</html>

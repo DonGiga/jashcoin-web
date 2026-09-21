@@ -26,7 +26,23 @@ https://bscscan.com/address/0xcE19ea3c9256f872806eeb15a873Ab3523Bd02C6
 ## PancakeSwap
 
 https://pancakeswap.finance/swap?outputCurrency=0xcE19ea3c9256f872806eeb15a873Ab3523Bd02C6
+## Tokenomics
 
+JASHCOIN tiene un suministro máximo fijo de **21,000,000 JASH**.
+
+| Allocation | JASH | Percentage |
+|---|---:|---:|
+| Reserve | 6,350,000 | 30.24% |
+| Development | 5,250,000 | 25.00% |
+| Community | 4,200,000 | 20.00% |
+| Project Treasury | 3,150,000 | 15.00% |
+| Operations | 1,050,000 | 5.00% |
+| Initial Liquidity Pool | 1,000,000 | 4.76% |
+| **Total** | **21,000,000** | **100%** |
+
+The allocation above reflects the current project distribution structure.
+
+Tokens assigned to Reserve, Development, Community and Operations are held in separate project accounts for clearer organization and transparency.
 ## Transparency
 
 - Fixed maximum supply: **21,000,000 JASH**

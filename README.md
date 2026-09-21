@@ -67,3 +67,27 @@ Comprueba siempre el contrato oficial y realiza tu propia evaluación antes de e
 ---
 
 **JASHCOIN — STRENGTH BUILDS FREEDOM**
+## Project Wallet Structure
+
+JASHCOIN maintains separate project wallets to improve organization and transparency.
+
+- **Reserve — 6,350,000 JASH:** Strategic project reserve. Not intended for immediate sale.
+- **Development — 5,250,000 JASH:** Development, security, infrastructure, applications and future technical expansion.
+- **Community — 4,200,000 JASH:** Community initiatives, promotions, rewards and adoption programs.
+- **Project Treasury — 3,150,000 JASH:** General treasury and future project financing.
+- **Operations — 1,050,000 JASH:** Operational expenses, services, infrastructure and project maintenance.
+
+These allocations describe their intended project purpose. The tokens are not automatically locked or vested by the JASHCOIN smart contract.
+
+## JASH Utility
+
+JASH is designed as the utility token of the JASHCOIN ecosystem.
+
+Planned uses include:
+
+- Payments within future JASHCOIN products and services.
+- Community rewards and incentives.
+- Access to future ecosystem features, services and benefits.
+- Peer-to-peer transfers and exchange through BNB Smart Chain.
+
+Some of these utilities are planned for future development and are not yet operational.

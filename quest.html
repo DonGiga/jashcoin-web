@@ -1,471 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>JASH Quest | Season 1</title>
-  <meta name="description" content="Complete JASH Quest missions and earn promotional JASH rewards.">
+<title>JASH Quest | Season 1</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta name="description"
+content="Join JASH Quest Season 1. Complete community missions and earn promotional JASH rewards.">
 
-    body {
-      background:
-        radial-gradient(circle at top, #302000 0%, #111 30%, #050505 70%);
-      color: #f5f5f5;
-      font-family: Arial, Helvetica, sans-serif;
-      min-height: 100vh;
-    }
+<style>
 
-    header {
-      text-align: center;
-      padding: 55px 20px 35px;
-      border-bottom: 1px solid #6e5012;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    .logo {
-      color: #f2c14e;
-      font-size: 18px;
-      letter-spacing: 5px;
-      margin-bottom: 22px;
-    }
+body {
+  background:
+    radial-gradient(circle at top, #302000 0%, #111 30%, #050505 70%);
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
 
-    h1 {
-      color: #ffd76a;
-      font-size: clamp(42px, 8vw, 78px);
-      letter-spacing: 3px;
-      text-shadow: 0 0 25px rgba(255, 190, 40, .25);
-    }
+header {
+  text-align: center;
+  padding: 55px 20px 35px;
+  border-bottom: 1px solid #6e5012;
+}
 
-    .season {
-      margin-top: 8px;
-      color: #c79b36;
-      font-size: 21px;
-      letter-spacing: 6px;
-    }
+.logo {
+  color: #f2c14e;
+  font-size: 18px;
+  letter-spacing: 5px;
+  margin-bottom: 22px;
+}
 
-    .intro {
-      max-width: 720px;
-      margin: 22px auto 0;
-      color: #c9c9c9;
-      line-height: 1.6;
-      font-size: 17px;
-    }
+h1 {
+  color: #ffd76a;
+  font-size: clamp(42px, 8vw, 78px);
+  letter-spacing: 3px;
+  text-shadow: 0 0 25px rgba(255,190,40,.25);
+}
 
-    .container {
-      width: min(950px, 92%);
-      margin: 45px auto;
-    }
+.season {
+  margin-top: 8px;
+  color: #c79b36;
+  font-size: 21px;
+  letter-spacing: 6px;
+}
 
-    .title {
-      text-align: center;
-      color: #ffd76a;
-      margin-bottom: 28px;
-      font-size: 29px;
-    }
+.intro {
+  max-width: 720px;
+  margin: 22px auto 0;
+  color: #c9c9c9;
+  line-height: 1.6;
+  font-size: 17px;
+}
 
-    .quests {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
-    }
+.container {
+  width: min(950px,92%);
+  margin: 45px auto;
+}
 
-    .quest {
-      background: linear-gradient(145deg, #181818, #0b0b0b);
-      border: 1px solid #755515;
-      border-radius: 14px;
-      padding: 25px;
-      transition: .2s ease;
-    }
+.title {
+  text-align: center;
+  color: #ffd76a;
+  margin-bottom: 28px;
+  font-size: 29px;
+}
 
-    .quest:hover {
-      transform: translateY(-3px);
-      border-color: #d5a62d;
-    }
+.quests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 18px;
+}
 
-    .number {
-      color: #9d7620;
-      font-size: 13px;
-      letter-spacing: 2px;
-    }
+.quest {
+  background: linear-gradient(145deg,#181818,#0b0b0b);
+  border: 1px solid #755515;
+  border-radius: 14px;
+  padding: 25px;
+  transition: .2s ease;
+}
 
-    .quest h2 {
-      margin: 12px 0;
-      font-size: 20px;
-    }
+.quest:hover {
+  transform: translateY(-3px);
+  border-color: #d5a62d;
+}
 
-    .quest p {
-      color: #aaa;
-      min-height: 70px;
-      line-height: 1.45;
-    }
+.number {
+  color: #9d7620;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
 
-    .reward {
-      display: inline-block;
-      margin-top: 20px;
-      color: #ffd76a;
-      font-size: 21px;
-      font-weight: bold;
-    }
+.quest h2 {
+  margin: 12px 0;
+  font-size: 20px;
+}
 
-    .bonus {
-      margin: 25px 0 45px;
-      padding: 25px;
-      text-align: center;
-      border: 1px solid #d3a22b;
-      border-radius: 14px;
-      background: rgba(191, 137, 15, .08);
-    }
+.quest p {
+  color: #aaa;
+  min-height: 85px;
+  line-height: 1.5;
+}
 
-    .bonus strong {
-      color: #ffd76a;
-      font-size: 25px;
-    }
+.reward {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ffd76a;
+  font-size: 21px;
+  font-weight: bold;
+}
 
-    .total {
-      margin-top: 10px;
-      color: #ccc;
-    }
+.bonus {
+  margin: 25px 0 45px;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #d3a22b;
+  border-radius: 14px;
+  background: rgba(191,137,15,.08);
+}
 
-    .start {
-      text-align: center;
-      padding: 10px 0 45px;
-    }
+.bonus strong {
+  color: #ffd76a;
+  font-size: 25px;
+}
 
-    .button {
-      display: inline-block;
-      background: linear-gradient(135deg, #e5b532, #8b6314);
-      color: #080808;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 16px 34px;
-      margin: 8px;
-      border-radius: 8px;
-      transition: .2s;
-    }
+.total {
+  margin-top: 10px;
+  color: #ccc;
+}
 
-    .button:hover {
-      transform: scale(1.03);
-    }
+.rules {
+  background: #0d0d0d;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 35px;
+}
 
-    .button.secondary {
-      background: transparent;
-      color: #e8bb45;
-      border: 1px solid #9b7421;
-    }
+.rules h2 {
+  color: #e5b73d;
+  margin-bottom: 15px;
+}
 
-    .rules {
-      background: #0d0d0d;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 28px;
-      margin-bottom: 35px;
-    }
+.rules li {
+  margin: 10px 0 10px 20px;
+  color: #bbb;
+  line-height: 1.45;
+}
 
-    .rules h2 {
-      color: #e5b73d;
-      margin-bottom: 15px;
-    }
+.start {
+  text-align: center;
+  padding: 10px 0 45px;
+}
 
-    .rules li {
-      margin: 10px 0 10px 20px;
-      color: #bbb;
-      line-height: 1.45;
-    }
+.button {
+  display: inline-block;
+  background: linear-gradient(135deg,#e5b532,#8b6314);
+  color: #080808;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 16px 34px;
+  margin: 8px;
+  border-radius: 8px;
+  transition: .2s;
+}
 
-    .contract {
-      text-align: center;
-      background: #090909;
-      border-top: 1px solid #30260d;
-      border-bottom: 1px solid #30260d;
-      padding: 25px 15px;
-      overflow-wrap: anywhere;
-    }
+.button:hover {
+  transform: scale(1.03);
+}
 
-    .contract span {
-      display: block;
-      color: #888;
-      margin-bottom: 8px;
-      font-size: 13px;
-      letter-spacing: 2px;
-    }
+.button.secondary {
+  background: transparent;
+  color: #e8bb45;
+  border: 1px solid #9b7421;
+}
 
-    .contract strong {
-      color: #d8b34f;
-    }
+.security {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  margin: 0 auto 35px;
+  max-width: 700px;
+  line-height: 1.6;
+}
 
-    footer {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      padding: 35px 20px 50px;
-      color: #777;
-      font-size: 13px;
-      line-height: 1.6;
-    }
+.security strong {
+  color: #d8b34f;
+}
 
-    footer a {
-      color: #c99d36;
-      text-decoration: none;
-    }
-  </style>
+.contract {
+  text-align: center;
+  background: #090909;
+  border-top: 1px solid #30260d;
+  border-bottom: 1px solid #30260d;
+  padding: 25px 15px;
+  overflow-wrap: anywhere;
+}
+
+.contract span {
+  display: block;
+  color: #888;
+  margin-bottom: 8px;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.contract strong {
+  color: #d8b34f;
+}
+
+footer {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  padding: 35px 20px 50px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #c99d36;
+  text-decoration: none;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-  <div class="logo">JASHCOIN</div>
+<div class="logo">JASHCOIN</div>
 
-  <h1>JASH QUEST</h1>
+<h1>JASH QUEST</h1>
 
-  <div class="season">SEASON 1</div>
+<div class="season">SEASON 1</div>
 
-  <p class="intro">
-    Complete community missions, participate in the JASHCOIN ecosystem
-    and earn promotional JASH rewards.
-  </p>
+<p class="intro">
+Complete the Season 1 community missions,
+participate in the JASHCOIN ecosystem
+and earn promotional JASH rewards.
+No purchase is required to participate.
+</p>
 
 </header>
 
 
 <main class="container">
 
-  <h2 class="title">MISSIONS</h2>
+<h2 class="title">SEASON 1 MISSIONS</h2>
 
 
-  <section class="quests">
+<section class="quests">
 
 
-    <!-- QUEST 01 -->
+<!-- QUEST 01 -->
 
-    <div class="quest">
+<div class="quest">
 
-      <div class="number">QUEST 01</div>
+<div class="number">QUEST 01</div>
 
-      <h2>Follow JASHCOIN</h2>
+<h2>Follow JASHCOIN</h2>
 
-      <p>
-        Follow the official JASHCOIN account on X.
-      </p>
+<p>
+Follow the official JASHCOIN account on X.
+Submit your X username so your participation
+can be verified.
+</p>
 
-      <div class="reward">
-        +50 JASH
-      </div>
+<div class="reward">+50 JASH</div>
 
-    </div>
+</div>
 
 
-    <!-- QUEST 02 -->
+<!-- QUEST 02 -->
 
-    <div class="quest">
+<div class="quest">
 
-      <div class="number">QUEST 02</div>
+<div class="number">QUEST 02</div>
 
-      <h2>Share JASH</h2>
+<h2>Share JASH</h2>
 
-      <p>
-        Repost the official JASH Quest announcement
-        and join the conversation.
-      </p>
+<p>
+Repost the official JASH Quest announcement
+and participate in the conversation.
+Submit the public link to your repost.
+</p>
 
-      <div class="reward">
-        +100 JASH
-      </div>
+<div class="reward">+100 JASH</div>
 
-    </div>
+</div>
 
 
-    <!-- QUEST 03 -->
+<!-- QUEST 03 -->
 
-    <div class="quest">
+<div class="quest">
 
-      <div class="number">QUEST 03</div>
+<div class="number">QUEST 03</div>
 
-      <h2>Join the Community</h2>
+<h2>Discover JASHCOIN</h2>
 
-      <p>
-        Become part of the official JASHCOIN community
-        and participate in Season 1.
-      </p>
+<p>
+Visit the official JASHCOIN website
+and answer the Season 1 question:
+What is the maximum supply of JASHCOIN?
+</p>
 
-      <div class="reward">
-        +50 JASH
-      </div>
+<div class="reward">+50 JASH</div>
 
-    </div>
+</div>
 
 
-    <!-- QUEST 04 -->
+<!-- QUEST 04 -->
 
-    <div class="quest">
+<div class="quest">
 
-      <div class="number">QUEST 04</div>
+<div class="number">QUEST 04</div>
 
-      <h2>Create JASH</h2>
+<h2>Create JASH</h2>
 
-      <p>
-        Create an original post about JASHCOIN on X
-        (text, image or meme), include #JASHCOIN,
-        and submit the public link.
-      </p>
+<p>
+Create an original public post about JASHCOIN
+on X. It can be text, an image or a meme.
+Include #JASHCOIN and submit the public link.
+</p>
 
-      <div class="reward">
-        +200 JASH
-      </div>
+<div class="reward">+200 JASH</div>
 
-    </div>
+</div>
 
-
-  </section>
-
-
-  <!-- BONUS -->
-
-  <section class="bonus">
-
-    COMPLETE ALL FOUR QUESTS
-
-    <br><br>
-
-    <strong>
-      +100 JASH BONUS
-    </strong>
-
-    <div class="total">
-
-      Maximum Season 1 reward:
-
-      <b>
-        500 JASH per participant
-      </b>
-
-    </div>
-
-  </section>
-
-
-  <!-- RULES -->
-
-  <section class="rules">
-
-    <h2>
-      Season 1 Rules
-    </h2>
-
-    <ul>
-
-      <li>
-        One participation per person/wallet.
-      </li>
-
-      <li>
-        Participants must provide a valid public BNB Smart Chain
-        wallet address to receive JASH.
-      </li>
-
-      <li>
-        Never provide a seed phrase or private key.
-        JASHCOIN will never request them.
-      </li>
-
-      <li>
-        Rewards are subject to verification of completed missions.
-      </li>
-
-      <li>
-        Quest 04 requires a public link to the participant's
-        original JASHCOIN post on X.
-      </li>
-
-      <li>
-        Fake accounts, bots, duplicate entries or fraudulent
-        submissions may be excluded.
-      </li>
-
-      <li>
-        Rewards are promotional JASH tokens and do not represent
-        a promise or guarantee of financial return.
-      </li>
-
-      <li>
-        Season 1 rewards are limited and may close when the
-        allocated campaign supply is exhausted.
-      </li>
-
-    </ul>
-
-  </section>
-
-
-  <!-- START -->
-
-  <section class="start">
-
-    <h2 style="color:#ffd76a; margin-bottom:18px;">
-      READY FOR THE QUEST?
-    </h2>
-
-
-    <a class="button"
-       href="https://forms.gle/pTLL7BmWToPdKRvJ9"
-       target="_blank"
-       rel="noopener">
-
-       START QUEST
-
-    </a>
-
-
-    <a class="button secondary"
-       href="/">
-
-       BACK TO JASHCOIN
-
-    </a>
-
-  </section>
-
-</main>
-
-
-<!-- CONTRACT -->
-
-<section class="contract">
-
-  <span>
-    OFFICIAL JASHCOIN CONTRACT — BNB SMART CHAIN
-  </span>
-
-  <strong>
-    0xcE19ea3c9256f872806eeb15a873Ab3523Bd02C6
-  </strong>
 
 </section>
 
 
-<!-- FOOTER -->
+<section class="bonus">
+
+COMPLETE ALL FOUR QUESTS
+
+<br><br>
+
+<strong>+100 JASH BONUS</strong>
+
+<div class="total">
+Maximum Season 1 reward:
+<b>500 JASH per participant</b>
+</div>
+
+</section>
+
+
+<section class="rules">
+
+<h2>Season 1 Rules</h2>
+
+<ul>
+
+<li>No purchase of JASH is required to participate.</li>
+
+<li>One participation per person and public BNB Smart Chain wallet.</li>
+
+<li>A valid public BNB Smart Chain wallet address is required to receive rewards.</li>
+
+<li>Quest rewards are issued only after verification.</li>
+
+<li>Quest 01 is verified using the submitted X username.</li>
+
+<li>Quest 02 requires a public link to the participant's repost.</li>
+
+<li>Quest 03 requires the correct answer to the JASHCOIN Season 1 question.</li>
+
+<li>Quest 04 requires an original public X post containing #JASHCOIN and a submitted public link.</li>
+
+<li>Fake accounts, bots, duplicate entries, copied content or fraudulent submissions may be excluded.</li>
+
+<li>One social account or wallet may not be used to claim multiple Season 1 rewards.</li>
+
+<li>Rewards are promotional JASH tokens and do not represent a promise or guarantee of financial return.</li>
+
+<li>Season 1 may close when the campaign's allocated reward supply is exhausted.</li>
+
+</ul>
+
+</section>
+
+
+<div class="security">
+
+<strong>SECURITY NOTICE</strong>
+
+<br><br>
+
+JASHCOIN will NEVER ask for your seed phrase,
+private key or wallet password.
+
+Only your PUBLIC BNB Smart Chain wallet address
+is required to receive a reward.
+
+</div>
+
+
+<section class="start">
+
+<h2 style="color:#ffd76a; margin-bottom:18px;">
+READY FOR THE QUEST?
+</h2>
+
+<a class="button"
+href="https://forms.gle/pTLL7BmWToPdKRvJ9"
+target="_blank"
+rel="noopener noreferrer">
+
+START QUEST
+
+</a>
+
+<a class="button secondary"
+href="/">
+
+BACK TO JASHCOIN
+
+</a>
+
+</section>
+
+</main>
+
+
+<section class="contract">
+
+<span>
+OFFICIAL JASHCOIN CONTRACT — BNB SMART CHAIN
+</span>
+
+<strong>
+0xcE19ea3c9256f872806eeb15a873Ab3523Bd02C6
+</strong>
+
+</section>
+
 
 <footer>
 
-  JASH Quest is a community promotional program of JASHCOIN.
-  Participation does not guarantee any monetary value or investment return.
-  Cryptocurrency involves risk.
+JASH Quest is a community promotional program of JASHCOIN.
 
-  <br><br>
+Participation does not guarantee monetary value,
+profit or investment return.
 
-  © 2026 JASHCOIN —
-  <a href="https://jashcoin.es">
-    jashcoin.es
-  </a>
+Cryptocurrency involves risk.
+
+<br><br>
+
+© 2026 JASHCOIN —
+<a href="https://jashcoin.es">jashcoin.es</a>
 
 </footer>
-
 
 </body>
 </html>
